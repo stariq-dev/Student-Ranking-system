@@ -11,7 +11,7 @@ A modern web application developed using Angular and TypeScript for managing stu
 
 ## Live Demo
 
-https://student-ranking-system-eight.vercel.app
+https://student-ranking-system-xi.vercel.app/
 
 ---
 
