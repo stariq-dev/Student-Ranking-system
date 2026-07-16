@@ -1,0 +1,63 @@
+<div class="bg-slate-800 rounded-lg shadow-lg p-6">
+  <h2 class="text-2xl font-bold mb-4 text-cyan-400">
+    <i class="fas fa-user-plus mr-2"></i>Add Student
+  </h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-slate-300">Student Name</label>
+        <input type="text" id="name" formControlName="name" class="mt-1 block w-full bg-slate-700 border border-slate-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-white">
+        @if (name?.invalid && (name?.dirty || name?.touched)) {
+          <div class="text-red-400 text-xs mt-1">
+            @if (name?.errors?.['required']) { <span>Name is required.</span> }
+            @if (name?.errors?.['minlength']) { <span>Name must be at least 3 characters.</span> }
+          </div>
+        }
+      </div>
+      <div>
+        <label for="rollNumber" class="block text-sm font-medium text-slate-300">Roll Number</label>
+        <input type="text" id="rollNumber" formControlName="rollNumber" class="mt-1 block w-full bg-slate-700 border border-slate-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-white">
+        @if (rollNumber?.invalid && (rollNumber?.dirty || rollNumber?.touched)) {
+          <div class="text-red-400 text-xs mt-1">
+            @if (rollNumber?.errors?.['required']) { <span>Roll Number is required.</span> }
+          </div>
+        }
+      </div>
+    </div>
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold text-slate-300 mb-2">Subject Marks (0-100)</h3>
+      <div formGroupName="marks" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label for="daa" class="block text-sm font-medium text-slate-400">DAA</label>
+          <input type="number" id="daa" formControlName="daa" class="mt-1 block w-full bg-slate-700 border border-slate-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-white">
+           @if (daa?.invalid && (daa?.dirty || daa?.touched)) {
+            <div class="text-red-400 text-xs mt-1">
+              <span>Marks must be 0-100.</span>
+            </div>
+          }
+        </div>
+        <div>
+          <label for="mit" class="block text-sm font-medium text-slate-400">MIT</label>
+          <input type="number" id="mit" formControlName="mit" class="mt-1 block w-full bg-slate-700 border border-slate-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-white">
+           @if (mit?.invalid && (mit?.dirty || mit?.touched)) {
+            <div class="text-red-400 text-xs mt-1">
+              <span>Marks must be 0-100.</span>
+            </div>
+          }
+        </div>
+        <div>
+          <label for="ohs" class="block text-sm font-medium text-slate-400">OHS</label>
+          <input type="number" id="ohs" formControlName="ohs" class="mt-1 block w-full bg-slate-700 border border-slate-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-white">
+           @if (ohs?.invalid && (ohs?.dirty || ohs?.touched)) {
+            <div class="text-red-400 text-xs mt-1">
+              <span>Marks must be 0-100.</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="studentForm.invalid" class="w-full bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 focus:ring-offset-slate-800 disabled:bg-slate-600 disabled:cursor-not-allowed transition-colors duration-200">
+      Add Student
+    </button>
+  </form>
+</div>

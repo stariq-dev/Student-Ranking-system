@@ -1,0 +1,12 @@
+@if (explanation()) {
+  @let exp = explanation()!;
+  <div class="bg-slate-800 rounded-lg shadow-lg p-6">
+    <h2 class="text-2xl font-bold mb-4 text-cyan-400"><i class="fas fa-book-open mr-2"></i>Algorithm Explained</h2>
+    <h3 class="text-xl font-semibold mb-2 text-amber-300">{{ exp.title }}</h3>
+    <p class="text-slate-300 mb-4 leading-relaxed">{{ exp.description }}</p>
+    <div class="border-t border-slate-700 pt-4">
+      <h4 class="font-semibold text-slate-200">When to use it:</h4>
+      <p class="text-slate-400 text-sm">{{ exp.useCase }}</p>
+    </div>
+  </div>
+}

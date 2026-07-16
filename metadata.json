@@ -1,0 +1,5 @@
+{
+  "name": "🎓 Student Marks Ranking System",
+  "description": "An academic project to manage student marks, rank them using various sorting algorithms, and analyze the performance of each algorithm in terms of time, space complexity, comparisons, and swaps.",
+  "requestFramePermissions": []
+}

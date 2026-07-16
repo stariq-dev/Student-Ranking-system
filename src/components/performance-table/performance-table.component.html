@@ -1,0 +1,55 @@
+<div class="bg-slate-800 rounded-lg shadow-lg p-6">
+  <h2 class="text-2xl font-bold mb-4 text-cyan-400"><i class="fas fa-chart-line mr-2"></i>Performance Analysis</h2>
+  @if (stats()) {
+    @let s = stats()!;
+    <div>
+      <h3 class="text-xl font-semibold text-center mb-4 text-amber-300">{{s.name}}</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left text-slate-300">
+          <thead class="text-xs text-cyan-300 uppercase bg-slate-700/50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Metric</th>
+              <th scope="col" class="px-6 py-3">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-clock w-4 mr-2 text-cyan-400"></i>Time Taken</td>
+              <td class="px-6 py-3 font-mono">{{ s.executionTime.toFixed(4) }} ms</td>
+            </tr>
+            <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-exchange-alt w-4 mr-2 text-cyan-400"></i>Comparisons</td>
+              <td class="px-6 py-3 font-mono">{{ s.comparisons.toLocaleString() }}</td>
+            </tr>
+             <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-retweet w-4 mr-2 text-cyan-400"></i>Swaps / Moves</td>
+              <td class="px-6 py-3 font-mono">{{ s.swaps.toLocaleString() }}</td>
+            </tr>
+            <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-thumbs-up w-4 mr-2 text-cyan-400"></i>Best Case</td>
+              <td class="px-6 py-3 font-mono">{{ s.best }}</td>
+            </tr>
+            <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-equals w-4 mr-2 text-cyan-400"></i>Average Case</td>
+              <td class="px-6 py-3 font-mono">{{ s.average }}</td>
+            </tr>
+            <tr class="bg-slate-800 border-b border-slate-700">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-thumbs-down w-4 mr-2 text-cyan-400"></i>Worst Case</td>
+              <td class="px-6 py-3 font-mono">{{ s.worst }}</td>
+            </tr>
+            <tr class="bg-slate-800">
+              <td class="px-6 py-3 font-medium text-white"><i class="fas fa-memory w-4 mr-2 text-cyan-400"></i>Space Complexity</td>
+              <td class="px-6 py-3 font-mono">{{ s.space }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  } @else {
+    <div class="text-center py-8 text-slate-400">
+      <i class="fas fa-tasks text-4xl mb-3"></i>
+      <p>No performance data available.</p>
+      <p class="text-sm">Run a sort to see the analysis.</p>
+    </div>
+  }
+</div>
