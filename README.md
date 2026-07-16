@@ -73,19 +73,19 @@ GitHub
 
 ### Home
 
-(Add Screenshot)
+<img width="635" height="386" alt="home" src="https://github.com/user-attachments/assets/6e4a59be-0c8e-43d4-8d6b-dc81831f347f" />
 
 ### Student List
 
-(Add Screenshot)
+<img width="582" height="209" alt="add-students" src="https://github.com/user-attachments/assets/b3a2e3fa-5068-466e-a842-224638eb00bc" />
 
 ### Ranking
 
-(Add Screenshot)
+<img width="575" height="239" alt="ranking" src="https://github.com/user-attachments/assets/2c1f92d6-2a16-4335-88ca-98ee20dbb516" />
 
 ### Algorithm Analysis
 
-(Add Screenshot)
+<img width="323" height="293" alt="analysis" src="https://github.com/user-attachments/assets/0603706a-7307-4349-b794-1e19149a28b2" />
 
 ---
 
@@ -188,10 +188,10 @@ Muhammad Shahbaz
 
 BS Computer Systems
 
-Riphah International University
+Riphah International University Lahore
 
 LinkedIn:
-(Add Link)
+https://www.linkedin.com/in/shahbaz32-dev/
 
 GitHub:
-(Add Link)
+https://github.com/stariq-dev/
